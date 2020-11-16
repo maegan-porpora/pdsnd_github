@@ -17,10 +17,10 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city = input('Enter a city (either chicago, new york city, or washington): ').lower()
+    city = input('Enter a city (either Chicago, New York City, or Washington): ').lower()
     while city not in ['chicago', 'new york city', 'washington']:
         print("Sorry, that's not a valid city!")
-        city = input('Enter a city (either chicago, new york city, or washingon): ')
+        city = input('Enter a city (either Chicago, New York City, or Washington): ').lower()
         
     # TO DO: get user input for month (all, january, february, ... , june)
     month = input('Enter a month (all, january, february, ... , june): ').lower()
@@ -117,7 +117,7 @@ def station_stats(df):
 
     # TO DO: display most frequent combination of start station and end station trip
     popular_combo = (df['Start Station'] + ' + ' + df['End Station']).mode()[0]
-    print('The most frequent combination of start station and end station trip is: ', popular_combo)
+    print('The most frequently traveled itinerary is : ', popular_combo)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -154,19 +154,19 @@ def user_stats(df):
     try:
         # TO DO: Display counts of gender
         gender = df['Gender'].value_counts()
-        print('The count per genger is:\n', gender, '\n')
+        print('The count per gender is:\n', gender, '\n')
 
         # TO DO: Display earliest, most recent, and most common year of birth
         min_birth = df['Birth Year'].min()
-        print('The earliest birth year is: ', min_birth)
+        print('The earliest birth year of users is: ', min_birth)
 
         max_birth = df['Birth Year'].max()
-        print('The most recent birth year is: ', max_birth)
+        print('The most recent birth year of users is: ', max_birth)
 
         mode_birth = df['Birth Year'].mode()[0]
-        print('The most common birth year is: ', mode_birth)
+        print('The most common birth year of users is: ', mode_birth)
     except:
-        print('Sorry, there is no gender or birth year data avaialble for Washington')
+        print('Sorry, there is no gender or birth year data available for Washington')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
