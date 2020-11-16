@@ -154,19 +154,19 @@ def user_stats(df):
     try:
         # TO DO: Display counts of gender
         gender = df['Gender'].value_counts()
-        print('The count per genger is:\n', gender, '\n')
+        print('The count per gender is:\n', gender, '\n')
 
         # TO DO: Display earliest, most recent, and most common year of birth
         min_birth = df['Birth Year'].min()
-        print('The earliest birth year is: ', min_birth)
+        print('The earliest birth year of users is: ', min_birth)
 
         max_birth = df['Birth Year'].max()
-        print('The most recent birth year is: ', max_birth)
+        print('The most recent birth year of users is: ', max_birth)
 
         mode_birth = df['Birth Year'].mode()[0]
-        print('The most common birth year is: ', mode_birth)
+        print('The most common birth year of users is: ', mode_birth)
     except:
-        print('Sorry, there is no gender or birth year data avaialble for Washington')
+        print('Sorry, there is no gender or birth year data available for Washington')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
