@@ -5,7 +5,7 @@
 US_Bikeshare_Data
 
 ### Description
-This project allows for the exploration of US bikeshare data from three major cities (Washington, New York City and Chicago). 
+This project allows for the exploration of US bikeshare data from three major cities (Washington, New York City and Chicago). The project is coded in Python.  
 
 ### Files used
 bikeshare.py
